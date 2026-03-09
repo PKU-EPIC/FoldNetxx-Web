@@ -327,6 +327,59 @@
 </section>
 
 
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Due to the deformable nature of garments, training a generalizable foundation model for T-shirt folding and unfolding that can transfer across different robotic embodiments is highly challenging. In this work, we propose FoldNet++, a cross-embodiment foundation model for T-shirt folding and unfolding trained entirely on large-scale synthetic data. For training data synthesis, we first adopt the approach of FoldNet to produce a large-scale set of physically simulatable T-shirts with diverse appearances and annotated semantic keypoints. Leveraging these semantic keypoints, we generate demonstrations across different robotic embodiments using a unified rule-based framework. The demonstrations covers T-shirt of arbitrary initial configurations. Then we use these demonstrations to train a vision-based model. Through large-scale synthesized cross-embodiment data, our model demonstrates strong zero-shot and few-shot capabilities across different robots. Our model can transfer to real-world environments without any real-world fine-tuning and can achieve a 93% success rate over the entire pipeline.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <img src="static/images/teaser.png" alt="First research result visualization" loading="lazy"/>
+        <div class="content has-text-justified">
+          <p>
+            Overview of FoldNet++. Our pipeline consists of three stages: demonstration generation, model pre-training, and deployment. (a) In the demonstration Generation stage, our dataset includes 6 different embodiments, 1K T-shirts with varying sizes and colors, and 1K table textures along with diverse HDRI assets. Using this setup, we generate 120K complete folding and unfolding demonstration episodes in simulation. (b) In the model pre-training stage, we adopt a mainstream flow-matching-based VLA architecture ($\pi_0$) and perform cross-embodiment (CE) pre-training. (c) In the final deployment stage, we directly evaluate the model trained purely on synthetic data in the real world. The model demonstrates strong zero-shot capability on an in-distribution embodiment and strong few-shot capability on an out-of-distribution (OOD) embodiment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+          <source src="static/videos/galbot_action.mp4" type="video/mp4">
+        </video>
+        <p>Deployment on Galbot</p>
+        
+        <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+          <source src="static/videos/arx_action.mp4" type="video/mp4">
+        </video>
+        <p>Deployment on ARX-R5</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- Teaser video-->
 <!-- <section class="hero teaser"> -->
   <!-- <div class="container is-max-desktop"> -->
